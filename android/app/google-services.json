@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1030492231072",
+    "firebase_url": "https://covidified.firebaseio.com",
+    "project_id": "covidified",
+    "storage_bucket": "covidified.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030492231072:android:ac16f811488646c11380c5",
+        "android_client_info": {
+          "package_name": "com.example.covidified"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030492231072-14gnl31qpe06e0i942u9vtd61568ko7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuSso68-rHhd8O5DAlbwrEMbSDHr75BTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030492231072-14gnl31qpe06e0i942u9vtd61568ko7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
