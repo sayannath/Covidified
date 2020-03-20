@@ -40,7 +40,7 @@ class _PageOneState extends State<PageOne> {
               ),
             ),
             SizedBox(
-              height: ,
+              height: 40,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
