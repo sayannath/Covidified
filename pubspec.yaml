@@ -51,6 +51,12 @@ flutter:
     - assets/images/logoCovid.jpg
     - assets/images/googleLogo.png
     - assets/images/guidingOne.png
+    - assets/images/guidingTwo.png
+    - assets/images/guidingThree.png
+    - assets/images/mask-group-1.png
+    - assets/images/f.png
+    - assets/images/xd.png
+    - assets/images/guidingFive.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

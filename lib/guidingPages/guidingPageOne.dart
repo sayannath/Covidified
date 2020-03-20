@@ -1,5 +1,5 @@
+import 'package:covidified/guidingPages/guidingPageTwo.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PageOne extends StatefulWidget {
   @override
@@ -7,7 +7,6 @@ class PageOne extends StatefulWidget {
 }
 
 class _PageOneState extends State<PageOne> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +51,9 @@ class _PageOneState extends State<PageOne> {
                   ),
                   child: IconButton(
                     color: Colors.black,
-                    onPressed: (){},
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
                     icon: Icon(Icons.arrow_back),
                   ),
                 ),
@@ -67,7 +68,12 @@ class _PageOneState extends State<PageOne> {
                   ),
                   child: IconButton(
                     color: Color(0xffF6F6F4),
-                    onPressed: (){},
+                    onPressed: () {
+                      Navigator.of(context).push(new MaterialPageRoute(
+                          builder: (BuildContext context) {
+                        return PageTwo();
+                      }));
+                    },
                     icon: Icon(Icons.arrow_forward),
                   ),
                 ),
