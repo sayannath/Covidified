@@ -7,8 +7,6 @@ class PageTwo extends StatefulWidget {
   _PageTwoState createState() => _PageTwoState();
 }
 
-
-
 class _PageTwoState extends State<PageTwo> {
   @override
   Widget build(BuildContext context) {
