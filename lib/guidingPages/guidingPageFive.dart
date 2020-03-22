@@ -1,5 +1,5 @@
+import 'package:covidified/alarmPage.dart';
 import 'package:covidified/guidingPages/guidingPageFour.dart';
-import 'package:covidified/homePage.dart';
 import 'package:flutter/material.dart';
 
 class PageFive extends StatefulWidget {
@@ -74,7 +74,7 @@ class _PageFiveState extends State<PageFive> {
                     onPressed: () {
                       Navigator.of(context).push(new MaterialPageRoute(
                           builder: (BuildContext context) {
-                            return HomePage();
+                            return AlarmPage();
                           }));
                     },
                     icon: Icon(Icons.arrow_forward),

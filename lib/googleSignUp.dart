@@ -1,4 +1,5 @@
 import 'package:covidified/guidingPages/guidingPageOne.dart';
+import 'package:covidified/loadingPage.dart';
 import 'package:covidified/values.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -36,7 +37,7 @@ class _SignUpPageState extends State<SignUpPage> {
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
-    // Note: user.providerData[0].photoUrl == googleUser.photoUrl.
+
     final user =
         (await FirebaseAuth.instance.signInWithCredential(credential)).user;
     kFirebaseAnalytics.logLogin();
@@ -47,6 +48,12 @@ class _SignUpPageState extends State<SignUpPage> {
   void _showUserProfilePage(FirebaseUser user) {
     Navigator.of(context)
         .pushReplacement(MaterialPageRoute(builder: (BuildContext context) {
+      return LoadingPage();
+    }));
+  }
+
+  void _showAlarmSetting(FirebaseUser user) {
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context){
       return PageOne();
     }));
   }

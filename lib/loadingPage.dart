@@ -58,6 +58,11 @@ class _LoadingPageState extends State<LoadingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff181818),
+      body: Center(
+        child: CircularProgressIndicator(
+          backgroundColor: Color(0xffFFD818),
+        ),
+      ),
     );
   }
 }
