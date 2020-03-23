@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:weather/weather.dart';
+import 'package:covidified/weather/weather.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -8,6 +8,28 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  WeatherModel weather = WeatherModel();
+  int temperature;
+  String weatherIcon;
+  String cityName;
+
+  void updateUI(dynamic weatherData) {
+    setState(() {
+      if (weatherData == null) {
+        temperature = 0;
+        weatherIcon = 'error';
+        cityName = '';
+        return;
+      }
+      temperature = weatherData['main']['temp'];
+      var condition = weatherData['weather'][0]['id'];
+      weatherIcon = weather.getWeatherIcon(condition);
+      cityName = weatherData['name'];
+
+    });
+  }
+
   FirebaseUser user;
   final FirebaseAuth _auth = FirebaseAuth.instance;
   bool isSignedIn = false;
@@ -26,9 +48,11 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
-  void initState() {
+  void initState() async {
     super.initState();
     this.getUser();
+    var weatherData = await weather.getLocationWeather();
+    updateUI(weatherData);
   }
 
   @override
@@ -60,12 +84,21 @@ class _HomePageState extends State<HomePage> {
                     width: 80,
                   ),
                   Text(
-                    "33°C",
+                    "$temperature" + " °C",
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontFamily: "Roboto",
                       fontSize: 40,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 80,
+                  ),
+                  Text(
+                    weatherIcon,
+                    style: TextStyle(
+                      fontSize: 100.0,
                     ),
                   ),
                 ],
@@ -80,6 +113,20 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 15,
+                        fontFamily: "Roboto"),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 15.0),
+              child: Row(
+                children: <Widget>[
+                  Text(
+                    "$cityName",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 10,
                         fontFamily: "Roboto"),
                   ),
                 ],
