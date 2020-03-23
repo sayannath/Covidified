@@ -11,8 +11,6 @@ class LoadingPage extends StatefulWidget {
 class _LoadingPageState extends State<LoadingPage> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-
-
   FirebaseUser user;
   bool isSignedIn = false;
 
