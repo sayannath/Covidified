@@ -112,7 +112,7 @@ class _SignUpPageState extends State<SignUpPage> {
             Container(
               margin: EdgeInsets.only(left: 22, top: 150),
               child: Text(
-                "Welcome to \nCovidified",
+                "Welcome to \nUnCovidify",
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   color: AppColors.accentText,
