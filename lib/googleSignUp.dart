@@ -1,4 +1,3 @@
-import 'package:covidified/guidingPages/guidingPageOne.dart';
 import 'package:covidified/loadingPage.dart';
 import 'package:covidified/values.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
@@ -52,11 +51,11 @@ class _SignUpPageState extends State<SignUpPage> {
     }));
   }
 
-  void _showAlarmSetting(FirebaseUser user) {
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context){
-      return PageOne();
-    }));
-  }
+  // void _showAlarmSetting(FirebaseUser user) {
+  //   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context){
+  //     return PageOne();
+  //   }));
+  // }
 
   Widget _signInButton() {
     return OutlineButton(
