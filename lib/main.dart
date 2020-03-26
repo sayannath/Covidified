@@ -1,3 +1,4 @@
+import 'package:covidified/homePage.dart';
 import 'package:covidified/loadingPage.dart';
 import 'package:flutter/material.dart';
 import 'package:custom_splash/custom_splash.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         logoSize: 200,
         duration: 4500,
         type: CustomSplashType.StaticDuration,
-        home: LoadingPage(),
+        home: HomePage()
       ),
     );
   }

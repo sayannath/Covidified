@@ -30,29 +30,32 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  FirebaseUser user;
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  bool isSignedIn = false;
+  // FirebaseUser user;
+  // final FirebaseAuth _auth = FirebaseAuth.instance;
+  // bool isSignedIn = false;
 
-  getUser() async {
-    FirebaseUser firebaseUser = await _auth.currentUser();
-    await firebaseUser?.reload();
-    firebaseUser = await _auth.currentUser();
+  // getUser() async {
+  //   FirebaseUser firebaseUser = await _auth.currentUser();
+  //   await firebaseUser?.reload();
+  //   firebaseUser = await _auth.currentUser();
 
-    if (firebaseUser != null) {
-      setState(() {
-        this.user = firebaseUser;
-        this.isSignedIn = true;
-      });
-    }
-  }
+  //   if (firebaseUser != null) {
+  //     setState(() {
+  //       this.user = firebaseUser;
+  //       this.isSignedIn = true;
+  //     });
+  //   }
+  // }
 
+  
   @override
-  void initState() async {
+  void initState() {
     super.initState();
-    this.getUser();
-    var weatherData = await weather.getLocationWeather();
-    updateUI(weatherData);
+    // this.getUser();
+    setState(() async{
+      var weatherData = await weather.getLocationWeather();
+      updateUI(weatherData);
+    });
   }
 
   @override
@@ -73,7 +76,8 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 children: <Widget>[
                   Text(
-                    "Hi ${user.displayName.substring(0, 6)}",
+                    // "Hi ${user.displayName.substring(0, 6)}",
+                    'hi xyzxyzxyz xyz',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Color(0xffFFD818),
