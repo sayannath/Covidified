@@ -36,6 +36,7 @@ dependencies:
   weather: ^0.9.6
   google_nav_bar: ^2.1.0
   line_icons: ^0.2.0
+  flutter_dialogflow:
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +66,10 @@ flutter:
     - assets/images/xd.png
     - assets/images/guidingFive.png
     - assets/images/assistant.png
-  #  - images/a_dot_ham.jpeg
+    - assets/images/googleassistant.png
+    - assets/images/placeholder.png
+    - assets/covid-19-hapalo-51419dae324d.json
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

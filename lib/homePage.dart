@@ -1,3 +1,4 @@
+import 'package:covidified/bot/google_assistant.dart';
 import 'package:covidified/newPage.dart';
 import 'package:covidified/profilePage.dart';
 import 'package:flutter/material.dart';
@@ -60,11 +61,15 @@ class _HomePageState extends State<HomePage> {
       style: optionStyle,
     ),
     Text(
-      'Index 1: News',
+      'Index 1: Bot',
       style: optionStyle,
     ),
     Text(
-      'Index 2: Profile',
+      'Index 2: News',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 3: Profile',
       style: optionStyle,
     ),
   ];
@@ -176,6 +181,17 @@ class _HomePageState extends State<HomePage> {
                       Navigator.of(context).pushReplacement(
                           MaterialPageRoute(builder: (BuildContext context) {
                         return HomePage();
+                      }));
+                    },
+                  ),
+                  GButton(
+                    icon: LineIcons.user,
+                    text: 'Bot',
+                    iconColor: Color(0xffFFD818),
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (BuildContext context) {
+                        return GoogleAssistant();
                       }));
                     },
                   ),
