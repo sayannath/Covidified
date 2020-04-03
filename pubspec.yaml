@@ -67,8 +67,7 @@ flutter:
     - assets/images/guidingFive.png
     - assets/images/assistant.png
     - assets/images/googleassistant.png
-    - assets/images/placeholder.png
-    - assets/covid-19-hapalo-51419dae324d.json
+    - assets/uncovid-bot-key.json
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

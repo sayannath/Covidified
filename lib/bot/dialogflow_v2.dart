@@ -43,7 +43,7 @@ class _HomePageDialogflowV2 extends State<HomePageDialogflowV2> {
 
   void response(query) async {
     _textController.clear();
-    AuthGoogle authGoogle = await AuthGoogle(fileJson: 'assets/covid-19-hapalo-51419dae324d.json').build();
+    AuthGoogle authGoogle = await AuthGoogle(fileJson: 'assets/uncovid-bot-key.json').build();
     Dialogflow dialogflow =Dialogflow(authGoogle: authGoogle,language: Language.english);
     AIResponse response = await dialogflow.detectIntent(query);
     ChatMessage message = new ChatMessage(

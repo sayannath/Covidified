@@ -72,7 +72,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
   void response(query) async {
     _textController.clear();
     AuthGoogle authGoogle =
-        await AuthGoogle(fileJson: 'assets/covid-19-hapalo-51419dae324d.json').build();
+        await AuthGoogle(fileJson: 'assets/uncovid-bot-key.json').build();
     Dialogflow dialogflow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);
     AIResponse response = await dialogflow.detectIntent(query);
